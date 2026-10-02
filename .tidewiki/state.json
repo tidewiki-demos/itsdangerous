@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "commit": "e455b13a4a5cd12e90d30231bc1c8d178d12bf54",
+  "commit": "b0de129846f3640c40582b59c315e6b75b4cffd9",
   "language": "es",
-  "updated_at": "2026-10-02T12:06:03Z",
+  "updated_at": "2026-10-02T13:13:06Z",
   "pages": {
     "api-reference": {
       "title": "Referencia de API y conceptos",
@@ -13,8 +13,8 @@
         "docs/license.rst",
         "src/itsdangerous/__init__.py"
       ],
-      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
-      "hash": "35f338cdaff0ab580a8e87b6f842634f070fb15317cbeff4707dd3a77b4bb462"
+      "commit": "b0de129846f3640c40582b59c315e6b75b4cffd9",
+      "hash": "6f65ffa14905486f0445e8e2e5532163e7a9f2660e112ba82d2e1306919224e3"
     },
     "changelog": {
       "title": "Historial de cambios",
@@ -22,19 +22,21 @@
       "files": [
         "CHANGES.rst"
       ],
-      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
-      "hash": "f1fb334ee79dca9be24f37eeef40710fe927269a19d9df4482ef3816086a563b"
+      "commit": "b0de129846f3640c40582b59c315e6b75b4cffd9",
+      "hash": "01cd984fea4c8d9bce1cb41fd0da158745dc1064323e06600e36b3de764c82b6"
     },
     "ci-and-deployment": {
       "title": "Integración continua y publicación",
       "summary": "Flujos de trabajo automatizados para pruebas, verificación de seguridad de dependencias y publicación de versiones.",
       "files": [
         ".github/workflows/lock.yaml",
+        ".github/workflows/pre-commit.yaml",
         ".github/workflows/publish.yaml",
-        ".github/workflows/tests.yaml"
+        ".github/workflows/tests.yaml",
+        ".github/workflows/tidewiki.yml"
       ],
-      "commit": "e455b13a4a5cd12e90d30231bc1c8d178d12bf54",
-      "hash": "2037e962d87e46975ce9492178b83aa0304940f8b1cb254b131e971756e307d1"
+      "commit": "b0de129846f3640c40582b59c315e6b75b4cffd9",
+      "hash": "2e081e8d499dfc141c2b46d6431365ecacde2aa6cfcf0a4c554efcd9b1e7caa1"
     },
     "development-setup": {
       "title": "Configuración y desarrollo",
@@ -43,45 +45,33 @@
         ".devcontainer/devcontainer.json",
         ".devcontainer/on-create-command.sh",
         ".pre-commit-config.yaml",
-        "CONTRIBUTING.rst",
-        "pyproject.toml",
-        "requirements/build.in",
-        "requirements/build.txt",
-        "requirements/dev.in",
-        "requirements/dev.txt",
-        "requirements/docs.in",
-        "requirements/docs.txt",
-        "requirements/tests.in",
-        "requirements/tests.txt",
-        "requirements/typing.in",
-        "requirements/typing.txt",
-        "tox.ini"
+        "pyproject.toml"
       ],
-      "commit": "e455b13a4a5cd12e90d30231bc1c8d178d12bf54",
-      "hash": "e45685cb8e81872e1cdac11647f38c867f4273084666b088574717aa3163189a"
+      "commit": "b0de129846f3640c40582b59c315e6b75b4cffd9",
+      "hash": "6a8e87876f06804dcab259edc2776e3d657112b0a3d072e40732e141f19a1090"
     },
     "documentation": {
       "title": "Sistema de documentación",
       "summary": "Configuración y construcción de la documentación del proyecto con Sphinx y ReadTheDocs.",
       "files": [
+        ".github/actions/tidewiki/action.yml",
         ".readthedocs.yaml",
         "docs/Makefile",
         "docs/conf.py",
         "docs/make.bat"
       ],
-      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
-      "hash": "7c0e2a05b8c28ca9a2afa43a0056c01aea62e7c854226032e19980289f0b81e8"
+      "commit": "b0de129846f3640c40582b59c315e6b75b4cffd9",
+      "hash": "a02fa98dc9f8751acd10bb50bb524f90c33649a234952c87a14f23dace691c33"
     },
     "index": {
       "title": "Visión general",
       "summary": "Entry point of the wiki.",
       "files": [
-        "CONTRIBUTING.rst",
         "README.md",
         "pyproject.toml"
       ],
-      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
-      "hash": "afa321297eb9017e767072dc6a221057e0cc5a14c5a90a33491d6ce4edaa2e56"
+      "commit": "b0de129846f3640c40582b59c315e6b75b4cffd9",
+      "hash": "2358d27a22c2078fed1fa67c5d2fefbbc6b5f9a87276b99d4ef52f7446884c99"
     },
     "serializer": {
       "title": "Serialización y compresión",
@@ -92,7 +82,7 @@
         "src/itsdangerous/serializer.py",
         "tests/test_itsdangerous/test_serializer.py"
       ],
-      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "commit": "b0de129846f3640c40582b59c315e6b75b4cffd9",
       "hash": "2c801cefdc8fb1a48909a1d70c37001229607a7a513876351aa8ea62b70bd40b"
     },
     "signer": {
@@ -104,7 +94,7 @@
         "src/itsdangerous/signer.py",
         "tests/test_itsdangerous/test_signer.py"
       ],
-      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "commit": "b0de129846f3640c40582b59c315e6b75b4cffd9",
       "hash": "484f2bf2e4e0efe2bb59da256e2cb442ef554666575f0185c31ff1e77a8b2b5c"
     },
     "timestamp-verification": {
@@ -115,7 +105,7 @@
         "src/itsdangerous/timed.py",
         "tests/test_itsdangerous/test_timed.py"
       ],
-      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "commit": "b0de129846f3640c40582b59c315e6b75b4cffd9",
       "hash": "a43198c108040fa98db3270baa8fecbd489f80c6d5b44458e265b84e9e99bd9e"
     },
     "url-safe-encoding": {
@@ -129,7 +119,7 @@
         "tests/test_itsdangerous/test_encoding.py",
         "tests/test_itsdangerous/test_url_safe.py"
       ],
-      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "commit": "b0de129846f3640c40582b59c315e6b75b4cffd9",
       "hash": "ec2c4560130ac1215880056601da2534093b65407f4752e7b7685acb6c2cf219"
     }
   },

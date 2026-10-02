@@ -2,13 +2,13 @@
 
 <!-- Maintained by Tidewiki. Edits are kept on later updates; wrap text in tidewiki:keep markers to freeze it. -->
 
-ItsDangerous es una librería de Python que proporciona herramientas para transmitir datos de forma segura a entornos no confiables y recuperarlos sin alteraciones. [`README.md:5-7`](../../README.md#L5-L7) Los datos se firman criptográficamente para garantizar que no hayan sido modificados. [`README.md:9-11`](../../README.md#L9-L11)
+ItsDangerous es una librería de Python que proporciona herramientas para transmitir datos de forma segura a entornos no confiables y recuperarlos sin alteraciones. [`README.md:7-9`](../../README.md#L7-L9) Los datos se firman criptográficamente para garantizar que no hayan sido modificados. [`README.md:11-13`](../../README.md#L11-L13)
 
 ## ¿Qué hace ItsDangerous?
 
 La librería resuelve el problema de intercambiar datos seguros entre aplicaciones, especialmente en contextos web donde los tokens o datos deben viajar por canales potencialmente inseguros. Por ejemplo, permite generar un token con información de un usuario que puede ser enviado al cliente y posteriormente verificado sin riesgo de manipulación.
 
-[`README.md:19-30`](../../README.md#L19-L30) Un ejemplo típico es serializar datos de un usuario, transmitirlos en una cookie o parámetro URL, y verificar su integridad al recibirlos:
+[`README.md:18-31`](../../README.md#L18-L31) Un ejemplo típico es serializar datos de un usuario, transmitirlos en una cookie o parámetro URL, y verificar su integridad al recibirlos:
 
 ```python
 from itsdangerous import URLSafeSerializer
@@ -48,18 +48,18 @@ graph TB
 
 ## Cómo ejecutar el código
 
-[`CONTRIBUTING.rst:69-122`](../../CONTRIBUTING.rst#L69-L122) Para configurar el entorno de desarrollo:
+[`pyproject.toml:25-54`](../../pyproject.toml#L25-L54) Para configurar el entorno de desarrollo:
 
 ```bash
 git clone https://github.com/pallets/itsdangerous
 cd itsdangerous
 python3 -m venv env
 . env/bin/activate  # En Windows: env\Scripts\activate
-pip install -r requirements/dev.txt && pip install -e .
+uv pip install -e .
 pre-commit install
 ```
 
-[`CONTRIBUTING.rst:171-184`](../../CONTRIBUTING.rst#L171-L184) Para ejecutar las pruebas:
+[`pyproject.toml:138-158`](../../pyproject.toml#L138-L158) Para ejecutar las pruebas:
 
 ```bash
 pytest              # Pruebas del entorno actual
@@ -77,3 +77,13 @@ tox                 # Suite completa de pruebas
 - **[Documentation (Sistema de documentación)](documentation.md)** — Cómo construir la documentación con Sphinx y ReadTheDocs.
 
 - **[Changelog (Historial de cambios)](changelog.md)** — Registro de versiones y cambios significativos del proyecto.
+
+## Decisiones
+
+**Usar `uv` como gestor de dependencias** (11b0f7e)
+
+Se migró de `pip` y `requirements/` a `uv` con dependency groups definidos en `pyproject.toml`. Esto simplifica la configuración del entorno de desarrollo y permite gestionar grupos de dependencias específicas (dev, tests, typing, docs, etc.) de forma declarativa.
+
+**Usar guía de contribución global** (11b0f7e)
+
+Se eliminó el archivo `CONTRIBUTING.rst` local para sincronizar con la documentación de contribución centralizada de Pallets en `https://palletsprojects.com/contributing/`, reduciendo la duplicación de documentación.
