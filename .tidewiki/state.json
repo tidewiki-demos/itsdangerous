@@ -1,0 +1,251 @@
+{
+  "version": 1,
+  "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+  "language": "es",
+  "updated_at": "2026-10-02T09:55:09Z",
+  "pages": {
+    "api-reference": {
+      "title": "Referencia de API Pública",
+      "summary": "Define la interfaz pública del paquete, exponiendo las clases y funciones principales para uso de desarrolladores.",
+      "files": [
+        "src/itsdangerous/__init__.py"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "c7f778ab309aa2fbaca53c820628af99470ab2669fa72dfc932addbb3643e171"
+    },
+    "changelog": {
+      "title": "Registro de Cambios",
+      "summary": "Documenta todas las características, correcciones de errores y cambios importantes en cada versión.",
+      "files": [
+        "CHANGES.rst"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "b41fb6400a4a28ea2ae774b1b18f8d2a931eac389376f029ca80918965476c04"
+    },
+    "ci-cd-pipelines": {
+      "title": "Flujos de Integración Continua",
+      "summary": "Configura pruebas automáticas, publicación de releases y otras tareas de CI/CD.",
+      "files": [
+        ".github/workflows/lock.yaml",
+        ".github/workflows/publish.yaml",
+        ".github/workflows/tests.yaml"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "df542fb6ad265544cca2ee37645980ca9d6ea3f57a1cf33f0e9ac8283b86e995"
+    },
+    "concepts": {
+      "title": "Conceptos Fundamentales",
+      "summary": "Documenta los principios detrás de la firma criptográfica, serialización y el diseño general del sistema.",
+      "files": [
+        "docs/concepts.rst"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "e5f3747a97ebc08176ad159c47c208e3ad8499b0f03551ccb00e576cef4c1a6f"
+    },
+    "contributing": {
+      "title": "Guía de Contribución",
+      "summary": "Explica cómo contribuir al proyecto, incluyendo estándares de código y proceso de pull requests.",
+      "files": [
+        ".github/ISSUE_TEMPLATE/bug-report.md",
+        ".github/ISSUE_TEMPLATE/config.yml",
+        ".github/ISSUE_TEMPLATE/feature-request.md",
+        ".github/pull_request_template.md",
+        "CONTRIBUTING.rst"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "bf0451d40300bd846d5f1755721eb0a8e7a84098989d3a2600aabee84fe4011b"
+    },
+    "core-signer": {
+      "title": "Firmante: Base de Criptografía",
+      "summary": "Implementa la funcionalidad principal de firma criptográfica para garantizar que los datos no hayan sido alterados. Es el componente fundamental sobre el cual se construyen características más avanzadas.",
+      "files": [
+        "src/itsdangerous/signer.py",
+        "tests/test_itsdangerous/test_signer.py"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "b7b6fb1df41a027bd5700a9761029471659f708ca1685a6ffbc6ebac47dadeca"
+    },
+    "development-setup": {
+      "title": "Configuración del Entorno de Desarrollo",
+      "summary": "Instrucciones para configurar el entorno de desarrollo, incluyendo contenedores y herramientas de linting.",
+      "files": [
+        ".devcontainer/devcontainer.json",
+        ".devcontainer/on-create-command.sh",
+        ".editorconfig",
+        ".pre-commit-config.yaml",
+        "tox.ini"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "14ea9fc875768ab5fc19ea92edd09419a097218453ecd93459d60094e3c21c2f"
+    },
+    "documentation-build": {
+      "title": "Generación de Documentación",
+      "summary": "Configura Sphinx y herramientas relacionadas para generar documentación del proyecto.",
+      "files": [
+        ".readthedocs.yaml",
+        "docs/Makefile",
+        "docs/changes.rst",
+        "docs/concepts.rst",
+        "docs/conf.py",
+        "docs/encoding.rst",
+        "docs/exceptions.rst",
+        "docs/index.rst",
+        "docs/license.rst",
+        "docs/make.bat",
+        "docs/serializer.rst",
+        "docs/signer.rst",
+        "docs/timed.rst",
+        "docs/url_safe.rst"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "1ac604348555b3f69826d7c63a913bcfacbb1a749890a7299946a30dfb50c107"
+    },
+    "encoding": {
+      "title": "Codificación y Compresión de Datos",
+      "summary": "Maneja la codificación base64, compresión zlib y conversión entre bytes y cadenas para optimizar el tamaño y compatibilidad de los tokens.",
+      "files": [
+        "src/itsdangerous/encoding.py",
+        "tests/test_itsdangerous/test_encoding.py"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "d9a23fd45696e58069e8c05c21731fd0da93096d48af995c0d4dfda89e2c354c"
+    },
+    "encoding-guide": {
+      "title": "Guía de Codificación",
+      "summary": "Describe las opciones de codificación y compresión disponibles para optimizar el tamaño de los tokens.",
+      "files": [
+        "docs/encoding.rst"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "5b84c73a7992065c221e0b11c316f9ec9c23b6c4f4e9023ff951a497d9d407f6"
+    },
+    "exceptions": {
+      "title": "Gestión de Errores",
+      "summary": "Define todas las excepciones personalizadas que pueden ocurrir durante la firma, verificación y deserialización de datos.",
+      "files": [
+        "src/itsdangerous/exc.py"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "83f43558527d28e0e0e2a97da1d852c8b0110c9895f4eadeae633fa8aea0c517"
+    },
+    "exceptions-reference": {
+      "title": "Referencia de Excepciones",
+      "summary": "Enumera todas las excepciones que puede lanzar la librería y cómo manejarlas.",
+      "files": [
+        "docs/exceptions.rst"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "c13924ca0cbdff3c1f6faac0b6fb8b20b9f4349b3a298e588676bdb91c750530"
+    },
+    "index": {
+      "title": "Visión general",
+      "summary": "Entry point of the wiki.",
+      "files": [
+        "CONTRIBUTING.rst",
+        "README.md",
+        "pyproject.toml"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "69fcdf06ea8ff31c0813c96ddb4f77db061f5718ce3c183f6596bdb56a365276"
+    },
+    "json-handling": {
+      "title": "Manejo de JSON",
+      "summary": "Proporciona utilidades para serialización JSON con manejo especial de tipos de datos personalizados.",
+      "files": [
+        "src/itsdangerous/_json.py"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "4f07726010392f2360c37bf86571ee0fffce856f14c178f87107133142458420"
+    },
+    "project-configuration": {
+      "title": "Configuración del Proyecto",
+      "summary": "Define la configuración de construcción, dependencias y metadatos del paquete.",
+      "files": [
+        "pyproject.toml",
+        "requirements/build.in",
+        "requirements/build.txt",
+        "requirements/dev.in",
+        "requirements/dev.txt",
+        "requirements/docs.in",
+        "requirements/docs.txt",
+        "requirements/tests.in",
+        "requirements/tests.txt",
+        "requirements/typing.in",
+        "requirements/typing.txt"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "ddf3f23e01ce95cca7955df7a58a1a4931200118d3c72593129199a7c203c1f9"
+    },
+    "serialization-guide": {
+      "title": "Guía de Serialización",
+      "summary": "Documenta cómo serializar y deserializar objetos Python complejos de forma segura.",
+      "files": [
+        "docs/serializer.rst"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "d99f08468921f8871eb75444d46fff81e5ac72edef4c3dbf32d666314c3be3a9"
+    },
+    "serializer": {
+      "title": "Serializador: Almacenamiento de Estructuras de Datos",
+      "summary": "Proporciona serialización de objetos Python con firma criptográfica, permitiendo guardar y recuperar estructuras de datos complejas de forma segura.",
+      "files": [
+        "src/itsdangerous/serializer.py",
+        "tests/test_itsdangerous/test_serializer.py"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "7d477b7c22fbbd3263031893426f1cae4faad4bbda474d4c89d7a5e3e1845d2a"
+    },
+    "signing-guide": {
+      "title": "Guía de Firma Criptográfica",
+      "summary": "Explica cómo usar el firmante para proteger datos contra manipulación, con ejemplos prácticos.",
+      "files": [
+        "docs/signer.rst"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "4562074b021be41749f6643325d0b4cc49f3750a95c46923ab6040db57ec27c7"
+    },
+    "timestamp": {
+      "title": "Validación con Marca Temporal",
+      "summary": "Añade capacidades de marca temporal a los firmantes, permitiendo verificar que los datos fueron firmados dentro de un período específico.",
+      "files": [
+        "src/itsdangerous/timed.py",
+        "tests/test_itsdangerous/test_timed.py"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "ec0af01847c8e9384ab249bd840b25d97b9236e7c47330c7e77735111805a5a6"
+    },
+    "timestamp-guide": {
+      "title": "Guía de Marcas Temporales",
+      "summary": "Explica cómo añadir y verificar marcas temporales en tokens para garantizar su actualidad.",
+      "files": [
+        "docs/timed.rst"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "3a9e10f22dc9b906cc5fe55d7c74c0c5094c331ca3ca266406dcebac01636692"
+    },
+    "url-safe": {
+      "title": "Codificación Segura para URL",
+      "summary": "Especializa los serializadores y firmantes para generar tokens seguros para URLs, evitando caracteres problemáticos en contextos web.",
+      "files": [
+        "src/itsdangerous/url_safe.py",
+        "tests/test_itsdangerous/test_url_safe.py"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "3af145c7d3013b377ce0ca1428aaaf7b6f95061d63b38e4db05cd1395907a2cb"
+    },
+    "url-safe-guide": {
+      "title": "Guía de Tokens Seguros para URL",
+      "summary": "Demuestra cómo generar tokens que pueden usarse de forma segura en URLs y parámetros de consulta.",
+      "files": [
+        "docs/url_safe.rst"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "f4679f4bffc30893dd7ea729791fd81f4b13af67bf426a4a6bd6bce9e823d982"
+    }
+  },
+  "unassigned": [
+    ".github/dependabot.yml",
+    ".gitignore",
+    "LICENSE.txt"
+  ]
+}
