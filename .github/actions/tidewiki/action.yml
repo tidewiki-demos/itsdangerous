@@ -1,0 +1,39 @@
+# Published from its own repository (franjhr/tidewiki-action) because the Marketplace needs a
+# repository with a single action at its root. Keep it in sync with this copy.
+name: Tidewiki
+description: Keep an AI-generated wiki of your repository up to date, one pull request at a time.
+author: Francisco Javier Hidalgo Ruiz
+branding:
+  icon: book-open
+  color: blue
+
+inputs:
+  command:
+    description: "update (default), init or estimate"
+    default: update
+  publish:
+    description: "Override `publish` from .tidewiki.yml, space separated (pr wiki site none)"
+    default: ""
+  max-cost:
+    description: "Stop if the run would cost more than this, in USD"
+    default: ""
+  github-token:
+    description: "Token that pushes the tidewiki/update branch and opens the pull request"
+    default: ${{ github.token }}
+
+runs:
+  using: docker
+  image: docker://ghcr.io/franjhr/tidewiki:edge
+  entrypoint: /bin/sh
+  # Inputs reach the script through env: GitHub keeps hyphens in INPUT_* names, which sh cannot read.
+  args:
+    - -c
+    - >-
+      exec tidewiki "$TIDEWIKI_COMMAND"
+      ${TIDEWIKI_PUBLISH:+--publish $TIDEWIKI_PUBLISH}
+      ${TIDEWIKI_MAX_COST:+--max-cost $TIDEWIKI_MAX_COST}
+  env:
+    TIDEWIKI_COMMAND: ${{ inputs.command }}
+    TIDEWIKI_PUBLISH: ${{ inputs.publish }}
+    TIDEWIKI_MAX_COST: ${{ inputs.max-cost }}
+    TIDEWIKI_GITHUB_TOKEN: ${{ inputs.github-token }}

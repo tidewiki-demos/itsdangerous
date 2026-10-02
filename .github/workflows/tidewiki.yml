@@ -1,0 +1,33 @@
+# Tidewiki demo: the template from franjhr/tidewiki (templates/github/tidewiki.yml) with the model on
+# AWS Bedrock through GitHub OIDC (no stored keys) and the action taken from this repository.
+name: Tidewiki
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ["docs/wiki/**", ".tidewiki/**", "AGENTS.md", "llms.txt"]
+  workflow_dispatch:
+
+concurrency:
+  group: tidewiki
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+jobs:
+  wiki:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: eu-west-1
+      - uses: ./.github/actions/tidewiki
+        with:
+          max-cost: "1"
