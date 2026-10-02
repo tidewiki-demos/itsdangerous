@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+  "commit": "e455b13a4a5cd12e90d30231bc1c8d178d12bf54",
   "language": "es",
-  "updated_at": "2026-10-02T09:57:50Z",
+  "updated_at": "2026-10-02T12:06:03Z",
   "pages": {
     "api-reference": {
       "title": "Referencia de API y conceptos",
@@ -33,8 +33,8 @@
         ".github/workflows/publish.yaml",
         ".github/workflows/tests.yaml"
       ],
-      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
-      "hash": "87f26d556b28828e4192ce2b5a321ecc5d701089093cbc79eaf6ec69b7ca7476"
+      "commit": "e455b13a4a5cd12e90d30231bc1c8d178d12bf54",
+      "hash": "2037e962d87e46975ce9492178b83aa0304940f8b1cb254b131e971756e307d1"
     },
     "development-setup": {
       "title": "Configuración y desarrollo",
@@ -57,8 +57,8 @@
         "requirements/typing.txt",
         "tox.ini"
       ],
-      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
-      "hash": "8e8cad6883921bd0c794418b5ebca9e624d115072504131d1601eefb4855f062"
+      "commit": "e455b13a4a5cd12e90d30231bc1c8d178d12bf54",
+      "hash": "e45685cb8e81872e1cdac11647f38c867f4273084666b088574717aa3163189a"
     },
     "documentation": {
       "title": "Sistema de documentación",

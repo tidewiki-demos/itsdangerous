@@ -43,12 +43,12 @@ Las dependencias están organizadas en archivos `.in` compilados a `.txt` con pi
 
 ### Formateo y linting
 
-El proyecto usa **Ruff** para linting y formateo de código. La configuración [`.pre-commit-config.yaml:4-8`](../../.pre-commit-config.yaml#L4-L8) ejecuta:
+El proyecto usa **Ruff** para linting y formateo de código. La configuración [`.pre-commit-config.yaml:2-6`](../../.pre-commit-config.yaml#L2-L6) ejecuta:
 
 - `ruff`: Verifica el código contra reglas B (bugbear), E (pycodestyle error), F (pyflakes), I (isort), UP (pyupgrade) y W (pycodestyle warning) [`pyproject.toml:75-83`](../../pyproject.toml#L75-L83)
 - `ruff-format`: Formatea el código automáticamente
 
-Otras verificaciones pre-commit [`.pre-commit-config.yaml:9-16`](../../.pre-commit-config.yaml#L9-L16):
+Otras verificaciones pre-commit [`.pre-commit-config.yaml:7-14`](../../.pre-commit-config.yaml#L7-L14):
 
 - Detecta conflictos de merge
 - Identifica sentencias de debug
@@ -125,13 +125,22 @@ Ver [`CONTRIBUTING.rst:52-63`](../../CONTRIBUTING.rst#L52-L63).
 
 Tox ejecuta pruebas en múltiples versiones de Python y ambientes especializados [`tox.ini`](../../tox.ini):
 
-- `py3{12,11,10,9,8}`: CPython 3.8 a 3.12
+- `py3{13,12,11,10,9,8}`: CPython 3.8 a 3.13
 - `pypy310`: PyPy 3.10
 - `style`: Verifica formato y linting con pre-commit
 - `typing`: Ejecuta mypy y pyright
 - `docs`: Construye la documentación
+- `update-actions`: Actualiza las acciones de GitHub con gha-update
+- `update-pre_commit`: Actualiza los hooks de pre-commit
+- `update-requirements`: Recompila los archivos de requisitos con pip-compile
 
 Comando: `tox` (o `tox -e typing` para un ambiente específico).
+
+## Decisions
+
+- **Python 3.13 en la matriz de pruebas** (commit 2da4fabb2213): Se añadió Python 3.13 a la lista de versiones testeadas en `tox.ini`, expandiendo de `py3{12,11,10,9,8}` a `py3{13,12,11,10,9,8}`.
+
+- **Cambios en automatización de actualizaciones** (commits ad4174f458fc y 0df2193cd68d): Se removió la configuración `ci.autoupdate_schedule` de `.pre-commit-config.yaml` y se separó el trabajo de actualización en tox en tres ambientes especializados (`update-actions`, `update-pre_commit`, `update-requirements`). Esto reemplaza el modelo anterior donde pre-commit autoupdate se ejecutaba como parte de `update-requirements` y se utiliza ahora `gha-update` para actualizar las acciones de GitHub.
 
 ## Configuración del proyecto
 

@@ -11,7 +11,7 @@ Este repositorio utiliza flujos de trabajo automatizados en GitHub Actions para 
 El flujo `Tests` se ejecuta en cada push a `main` y ramas de la serie `*.x`, así como en pull requests. Ignora cambios que afecten solo documentación y archivos Markdown.
 
 Las pruebas se ejecutan en una matriz de configuraciones:
-- **Versiones de Python**: 3.12, 3.11, 3.10, 3.9, 3.8 y PyPy 3.10
+- **Versiones de Python**: 3.13, 3.12, 3.11, 3.10, 3.9, 3.8 y PyPy 3.10
 - **Sistemas operativos**: Ubuntu (por defecto), Windows y macOS para Python 3.12
 
 Cada combinación ejecuta la suite de pruebas mediante `tox`. [`.github/workflows/tests.yaml:40-41`](../../.github/workflows/tests.yaml#L40-L41)
