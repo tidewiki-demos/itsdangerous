@@ -1,148 +1,135 @@
 {
   "version": 1,
-  "commit": "e455b13a4a5cd12e90d30231bc1c8d178d12bf54",
+  "commit": "3ad401295f4106c46bbe739d2b494e347a33c0af",
   "language": "es",
-  "updated_at": "2026-10-02T12:06:03Z",
+  "updated_at": "2026-10-02T12:18:05Z",
   "pages": {
-    "api-reference": {
-      "title": "Referencia de API y conceptos",
-      "summary": "Documentación de conceptos fundamentales, excepciones y configuración general de la librería.",
+    "codificacion-y-excepciones": {
+      "title": "Codificación y Excepciones",
+      "summary": "Utilidades para manejar codificación de caracteres y definiciones de excepciones personalizadas del sistema.",
       "files": [
-        "docs/concepts.rst",
+        "docs/encoding.rst",
         "docs/exceptions.rst",
-        "docs/license.rst",
-        "src/itsdangerous/__init__.py"
+        "src/itsdangerous/encoding.py",
+        "src/itsdangerous/exc.py",
+        "tests/test_itsdangerous/test_encoding.py"
       ],
-      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
-      "hash": "35f338cdaff0ab580a8e87b6f842634f070fb15317cbeff4707dd3a77b4bb462"
+      "commit": "3ad401295f4106c46bbe739d2b494e347a33c0af",
+      "hash": "32434d46b3a5ffdd5884eec7affa4a1e4bc1c6604f19f8c7be810a1d87b12538"
     },
-    "changelog": {
-      "title": "Historial de cambios",
-      "summary": "Registro de cambios, versiones y actualizaciones significativas del proyecto.",
+    "conceptos-fundamentales": {
+      "title": "Conceptos Fundamentales",
+      "summary": "Introducción a los conceptos clave de ItsDangerous: firma criptográfica, serialización segura y casos de uso.",
       "files": [
-        "CHANGES.rst"
+        "docs/concepts.rst"
       ],
-      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
-      "hash": "f1fb334ee79dca9be24f37eeef40710fe927269a19d9df4482ef3816086a563b"
+      "commit": "3ad401295f4106c46bbe739d2b494e347a33c0af",
+      "hash": "c17afac344a4bac8ba8b668e0304c90d6853922ff6f02e3469606dea6296bb0e"
     },
-    "ci-and-deployment": {
-      "title": "Integración continua y publicación",
-      "summary": "Flujos de trabajo automatizados para pruebas, verificación de seguridad de dependencias y publicación de versiones.",
+    "construccion-y-documentacion": {
+      "title": "Construcción y Documentación",
+      "summary": "Configuración del proyecto, construcción de documentación Sphinx y publicación del paquete.",
+      "files": [
+        "LICENSE.txt",
+        "README.md",
+        "docs/Makefile",
+        "docs/changes.rst",
+        "docs/concepts.rst",
+        "docs/conf.py",
+        "docs/encoding.rst",
+        "docs/exceptions.rst",
+        "docs/index.rst",
+        "docs/license.rst",
+        "docs/make.bat",
+        "docs/serializer.rst",
+        "docs/signer.rst",
+        "docs/timed.rst",
+        "docs/url_safe.rst",
+        "pyproject.toml"
+      ],
+      "commit": "3ad401295f4106c46bbe739d2b494e347a33c0af",
+      "hash": "a3bb874c587e5f7cdb17d67f537aa2c3a99c554243122c48b12522013b49182a"
+    },
+    "firmante": {
+      "title": "Firmante (Signer)",
+      "summary": "Componente central que genera y verifica firmas criptográficas para garantizar la integridad de datos sin modificaciones.",
+      "files": [
+        "docs/signer.rst",
+        "src/itsdangerous/signer.py",
+        "tests/test_itsdangerous/test_signer.py"
+      ],
+      "commit": "3ad401295f4106c46bbe739d2b494e347a33c0af",
+      "hash": "656ed25b21013ad15666d52e4c3cc8bdd0a2f7dee6257c7b17c3c7df732bf29c"
+    },
+    "firmante-con-tiempo": {
+      "title": "Firmante con Tiempo",
+      "summary": "Extensión del firmante que añade marcas de tiempo a los tokens para verificar su antigüedad y validez temporal.",
+      "files": [
+        "docs/timed.rst",
+        "src/itsdangerous/timed.py",
+        "tests/test_itsdangerous/test_timed.py"
+      ],
+      "commit": "3ad401295f4106c46bbe739d2b494e347a33c0af",
+      "hash": "76188dcf77f2e93fb2638e5d38a92affa1097957be4bd90a6850eeeb6a3aa90c"
+    },
+    "flujo-de-integracion": {
+      "title": "Flujo de Integración Continua",
+      "summary": "Automatización de pruebas, verificación de código, construcción y publicación mediante workflows de GitHub.",
       "files": [
         ".github/workflows/lock.yaml",
+        ".github/workflows/pre-commit.yaml",
         ".github/workflows/publish.yaml",
-        ".github/workflows/tests.yaml"
+        ".github/workflows/tests.yaml",
+        ".pre-commit-config.yaml"
       ],
-      "commit": "e455b13a4a5cd12e90d30231bc1c8d178d12bf54",
-      "hash": "2037e962d87e46975ce9492178b83aa0304940f8b1cb254b131e971756e307d1"
-    },
-    "development-setup": {
-      "title": "Configuración y desarrollo",
-      "summary": "Herramientas de desarrollo, dependencias del proyecto y configuración del entorno para contribuidores.",
-      "files": [
-        ".devcontainer/devcontainer.json",
-        ".devcontainer/on-create-command.sh",
-        ".pre-commit-config.yaml",
-        "CONTRIBUTING.rst",
-        "pyproject.toml",
-        "requirements/build.in",
-        "requirements/build.txt",
-        "requirements/dev.in",
-        "requirements/dev.txt",
-        "requirements/docs.in",
-        "requirements/docs.txt",
-        "requirements/tests.in",
-        "requirements/tests.txt",
-        "requirements/typing.in",
-        "requirements/typing.txt",
-        "tox.ini"
-      ],
-      "commit": "e455b13a4a5cd12e90d30231bc1c8d178d12bf54",
-      "hash": "e45685cb8e81872e1cdac11647f38c867f4273084666b088574717aa3163189a"
-    },
-    "documentation": {
-      "title": "Sistema de documentación",
-      "summary": "Configuración y construcción de la documentación del proyecto con Sphinx y ReadTheDocs.",
-      "files": [
-        ".readthedocs.yaml",
-        "docs/Makefile",
-        "docs/conf.py",
-        "docs/make.bat"
-      ],
-      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
-      "hash": "7c0e2a05b8c28ca9a2afa43a0056c01aea62e7c854226032e19980289f0b81e8"
+      "commit": "3ad401295f4106c46bbe739d2b494e347a33c0af",
+      "hash": "363abbd0a360ddf300208c639f5f3d5d991798d6981e50f7982c0bf9a8302c89"
     },
     "index": {
       "title": "Visión general",
       "summary": "Entry point of the wiki.",
       "files": [
-        "CONTRIBUTING.rst",
         "README.md",
         "pyproject.toml"
       ],
-      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
-      "hash": "afa321297eb9017e767072dc6a221057e0cc5a14c5a90a33491d6ce4edaa2e56"
+      "commit": "3ad401295f4106c46bbe739d2b494e347a33c0af",
+      "hash": "c19bc3221a3dd96ef57914320c866d0010a22e11ef931877b71ea38156ad4924"
     },
-    "serializer": {
-      "title": "Serialización y compresión",
-      "summary": "Serialización segura de objetos Python con soporte para múltiples formatos, compresión automática y integración con el sistema de firma.",
+    "serializador": {
+      "title": "Serializador",
+      "summary": "Sistema para serializar datos complejos de forma segura, permitiendo convertir objetos Python a tokens firmados y viceversa.",
       "files": [
         "docs/serializer.rst",
         "src/itsdangerous/_json.py",
         "src/itsdangerous/serializer.py",
         "tests/test_itsdangerous/test_serializer.py"
       ],
-      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
-      "hash": "2c801cefdc8fb1a48909a1d70c37001229607a7a513876351aa8ea62b70bd40b"
+      "commit": "3ad401295f4106c46bbe739d2b494e347a33c0af",
+      "hash": "d94e04cd0439b49793bba2a766960d1bd58d28dedd0c4109928fc30cf9d42f49"
     },
-    "signer": {
-      "title": "Firma de datos",
-      "summary": "Sistema central de firma criptográfica que genera y verifica firmas HMAC para garantizar que los datos no hayan sido alterados.",
+    "url-segura": {
+      "title": "Codificación URL Segura",
+      "summary": "Variantes de firmante y serializador diseñadas para transmisión segura en URLs y cookies sin caracteres problemáticos.",
       "files": [
-        "docs/signer.rst",
-        "src/itsdangerous/exc.py",
-        "src/itsdangerous/signer.py",
-        "tests/test_itsdangerous/test_signer.py"
-      ],
-      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
-      "hash": "484f2bf2e4e0efe2bb59da256e2cb442ef554666575f0185c31ff1e77a8b2b5c"
-    },
-    "timestamp-verification": {
-      "title": "Verificación con marca de tiempo",
-      "summary": "Extensión que añade y verifica automáticamente marcas de tiempo en los tokens para controlar su validez temporal.",
-      "files": [
-        "docs/timed.rst",
-        "src/itsdangerous/timed.py",
-        "tests/test_itsdangerous/test_timed.py"
-      ],
-      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
-      "hash": "a43198c108040fa98db3270baa8fecbd489f80c6d5b44458e265b84e9e99bd9e"
-    },
-    "url-safe-encoding": {
-      "title": "Codificación segura para URL",
-      "summary": "Codificación de datos en formato seguro para URLs y bases de datos, con soporte para caracteres especiales.",
-      "files": [
-        "docs/encoding.rst",
         "docs/url_safe.rst",
-        "src/itsdangerous/encoding.py",
         "src/itsdangerous/url_safe.py",
-        "tests/test_itsdangerous/test_encoding.py",
         "tests/test_itsdangerous/test_url_safe.py"
       ],
-      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
-      "hash": "ec2c4560130ac1215880056601da2534093b65407f4752e7b7685acb6c2cf219"
+      "commit": "3ad401295f4106c46bbe739d2b494e347a33c0af",
+      "hash": "705a6f7bb8d4189dae4a3b0f569f943f59ece95b149abe53cf0dc48d2afc5c2b"
     }
   },
   "unassigned": [
+    ".devcontainer/devcontainer.json",
+    ".devcontainer/on-create-command.sh",
     ".editorconfig",
     ".github/ISSUE_TEMPLATE/bug-report.md",
     ".github/ISSUE_TEMPLATE/config.yml",
     ".github/ISSUE_TEMPLATE/feature-request.md",
-    ".github/dependabot.yml",
     ".github/pull_request_template.md",
     ".gitignore",
-    "LICENSE.txt",
-    "docs/changes.rst",
-    "docs/index.rst"
+    ".readthedocs.yaml",
+    "CHANGES.rst",
+    "src/itsdangerous/__init__.py"
   ]
 }
