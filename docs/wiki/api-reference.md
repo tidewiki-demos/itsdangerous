@@ -102,7 +102,7 @@ Si tu proyecto considera SHA-1 un riesgo, puedes configurar el signer con un mé
 
 ## Excepciones
 
-La librería define las siguientes excepciones [`src/itsdangerous/__init__.py:8-13`](../../src/itsdangerous/__init__.py#L8-L13):
+La librería define las siguientes excepciones [`src/itsdangerous/__init__.py:1-9`](../../src/itsdangerous/__init__.py#L1-L9):
 
 | Excepción | Descripción |
 |-----------|-------------|
