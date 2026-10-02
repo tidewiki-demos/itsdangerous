@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+  "language": "es",
+  "updated_at": "2026-10-02T09:57:50Z",
+  "pages": {
+    "api-reference": {
+      "title": "Referencia de API y conceptos",
+      "summary": "Documentación de conceptos fundamentales, excepciones y configuración general de la librería.",
+      "files": [
+        "docs/concepts.rst",
+        "docs/exceptions.rst",
+        "docs/license.rst",
+        "src/itsdangerous/__init__.py"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "35f338cdaff0ab580a8e87b6f842634f070fb15317cbeff4707dd3a77b4bb462"
+    },
+    "changelog": {
+      "title": "Historial de cambios",
+      "summary": "Registro de cambios, versiones y actualizaciones significativas del proyecto.",
+      "files": [
+        "CHANGES.rst"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "f1fb334ee79dca9be24f37eeef40710fe927269a19d9df4482ef3816086a563b"
+    },
+    "ci-and-deployment": {
+      "title": "Integración continua y publicación",
+      "summary": "Flujos de trabajo automatizados para pruebas, verificación de seguridad de dependencias y publicación de versiones.",
+      "files": [
+        ".github/workflows/lock.yaml",
+        ".github/workflows/publish.yaml",
+        ".github/workflows/tests.yaml"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "87f26d556b28828e4192ce2b5a321ecc5d701089093cbc79eaf6ec69b7ca7476"
+    },
+    "development-setup": {
+      "title": "Configuración y desarrollo",
+      "summary": "Herramientas de desarrollo, dependencias del proyecto y configuración del entorno para contribuidores.",
+      "files": [
+        ".devcontainer/devcontainer.json",
+        ".devcontainer/on-create-command.sh",
+        ".pre-commit-config.yaml",
+        "CONTRIBUTING.rst",
+        "pyproject.toml",
+        "requirements/build.in",
+        "requirements/build.txt",
+        "requirements/dev.in",
+        "requirements/dev.txt",
+        "requirements/docs.in",
+        "requirements/docs.txt",
+        "requirements/tests.in",
+        "requirements/tests.txt",
+        "requirements/typing.in",
+        "requirements/typing.txt",
+        "tox.ini"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "8e8cad6883921bd0c794418b5ebca9e624d115072504131d1601eefb4855f062"
+    },
+    "documentation": {
+      "title": "Sistema de documentación",
+      "summary": "Configuración y construcción de la documentación del proyecto con Sphinx y ReadTheDocs.",
+      "files": [
+        ".readthedocs.yaml",
+        "docs/Makefile",
+        "docs/conf.py",
+        "docs/make.bat"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "7c0e2a05b8c28ca9a2afa43a0056c01aea62e7c854226032e19980289f0b81e8"
+    },
+    "index": {
+      "title": "Visión general",
+      "summary": "Entry point of the wiki.",
+      "files": [
+        "CONTRIBUTING.rst",
+        "README.md",
+        "pyproject.toml"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "afa321297eb9017e767072dc6a221057e0cc5a14c5a90a33491d6ce4edaa2e56"
+    },
+    "serializer": {
+      "title": "Serialización y compresión",
+      "summary": "Serialización segura de objetos Python con soporte para múltiples formatos, compresión automática y integración con el sistema de firma.",
+      "files": [
+        "docs/serializer.rst",
+        "src/itsdangerous/_json.py",
+        "src/itsdangerous/serializer.py",
+        "tests/test_itsdangerous/test_serializer.py"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "2c801cefdc8fb1a48909a1d70c37001229607a7a513876351aa8ea62b70bd40b"
+    },
+    "signer": {
+      "title": "Firma de datos",
+      "summary": "Sistema central de firma criptográfica que genera y verifica firmas HMAC para garantizar que los datos no hayan sido alterados.",
+      "files": [
+        "docs/signer.rst",
+        "src/itsdangerous/exc.py",
+        "src/itsdangerous/signer.py",
+        "tests/test_itsdangerous/test_signer.py"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "484f2bf2e4e0efe2bb59da256e2cb442ef554666575f0185c31ff1e77a8b2b5c"
+    },
+    "timestamp-verification": {
+      "title": "Verificación con marca de tiempo",
+      "summary": "Extensión que añade y verifica automáticamente marcas de tiempo en los tokens para controlar su validez temporal.",
+      "files": [
+        "docs/timed.rst",
+        "src/itsdangerous/timed.py",
+        "tests/test_itsdangerous/test_timed.py"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "a43198c108040fa98db3270baa8fecbd489f80c6d5b44458e265b84e9e99bd9e"
+    },
+    "url-safe-encoding": {
+      "title": "Codificación segura para URL",
+      "summary": "Codificación de datos en formato seguro para URLs y bases de datos, con soporte para caracteres especiales.",
+      "files": [
+        "docs/encoding.rst",
+        "docs/url_safe.rst",
+        "src/itsdangerous/encoding.py",
+        "src/itsdangerous/url_safe.py",
+        "tests/test_itsdangerous/test_encoding.py",
+        "tests/test_itsdangerous/test_url_safe.py"
+      ],
+      "commit": "f59a09de8199d411f4624ca4116ed5a7d712628f",
+      "hash": "ec2c4560130ac1215880056601da2534093b65407f4752e7b7685acb6c2cf219"
+    }
+  },
+  "unassigned": [
+    ".editorconfig",
+    ".github/ISSUE_TEMPLATE/bug-report.md",
+    ".github/ISSUE_TEMPLATE/config.yml",
+    ".github/ISSUE_TEMPLATE/feature-request.md",
+    ".github/dependabot.yml",
+    ".github/pull_request_template.md",
+    ".gitignore",
+    "LICENSE.txt",
+    "docs/changes.rst",
+    "docs/index.rst"
+  ]
+}
